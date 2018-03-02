@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.madret.icardadmin.LoginActivity"
+    tools:layout_editor_absoluteY="25dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        tools:layout_constraintBottom_creator="1"
+        app:ccp_clickable="false"
+        app:ccp_showArrow="false"
+        app:ccp_showNameCode="false"
+        app:ccp_contentColor="@color/colorwhite"
+        android:layout_marginStart="111dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayoustw"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textInputLayoustw"
+        android:layout_marginLeft="111dp" />
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:id="@+id/textInputLayoust"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        app:passwordToggleEnabled="true"
+        android:layout_marginRight="8dp"
+        android:textColorHint="@color/colorwhite"
+        app:layout_constraintBottom_toTopOf="@+id/AppCompatButton_buttonlogin"
+        app:layout_constraintHorizontal_bias="0.0">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/AppCompatEditText_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:imeOptions="actionNext"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:id="@+id/textInputLayoustw"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:textColorHint="@color/colorwhite"
+        app:layout_constraintBottom_toTopOf="@+id/AppCompatButton_buttonlogin"
+        app:layout_constraintHorizontal_bias="0.0">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/AppCompatEditText_phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phonenumber"
+            android:inputType="phone"
+            android:maxLength="9"
+            android:imeOptions="actionNext"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/AppCompatButton_buttonlogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="@color/colorwhite"
+        android:backgroundTint="@color/colorgreen"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/AppCompatTextView_createaccount"
+        android:layout_marginBottom="27dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/AppCompatTextView_createaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textColor="@color/colorwhite"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="348dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:theme="@style/progressbarlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/AppCompatTextView_createaccount"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/AppCompatTextView_createaccount"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="24dp" />
+</android.support.constraint.ConstraintLayout>
